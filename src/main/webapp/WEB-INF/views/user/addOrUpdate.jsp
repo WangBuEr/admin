@@ -44,24 +44,34 @@
 									name="id">
 							</div>
 						</div>
+						<div class="form-group  col-sm-6">
+							<label for="password" class="col-sm-2 control-label">密码</label>
+							<div class="col-sm-10">
+								<input autocomplete="off" value="" type="password" class="form-control" id="password"
+									name="password" placeholder="密码不修改请留空">
+							</div>
+						</div>
+						
+					</div>
+					<div class="row">
 						<div class="form-group col-sm-6">
-							<label for="name" class="col-sm-2 control-label">用户名</label>
+							<label for="wx" class="col-sm-2 control-label">微信号</label>
+							<div class="col-sm-10">
+								<input autocomplete="off" value="${user.wx}" type="text" class="form-control" id="name"
+									name="wx" placeholder="请输入微信号">
+							</div>
+						</div>
+						<div class="form-group col-sm-6">
+							<label for="name" class="col-sm-2 control-label">用户姓名</label>
 							<div class="col-sm-10">
 								<input style="display: none;">
 								<input autocomplete="off" value="${user.name}" type="text" class="form-control" id="name"
 									name="name" placeholder="请输入用户姓名">
 							</div>
 						</div>
+						
 					</div>
 					<div class="row">
-						<div class="form-group  col-sm-6">
-							<label for="password" class="col-sm-2 control-label">密码</label>
-							<div class="col-sm-10">
-								<input style="display: none;">
-								<input autocomplete="off" value="" type="password" class="form-control" id="password"
-									name="password" placeholder="密码不修改请留空">
-							</div>
-						</div>
 						<div class="form-group col-sm-6">
 							<label for="sex" class="col-sm-2 control-label">性别</label>
 							<div class="col-sm-10">
@@ -71,8 +81,6 @@
 								</select>
 							</div>
 						</div>
-					</div>
-					<div class="row">
 						<div class="form-group  col-sm-6">
 							<label for="age" class="col-sm-2 control-label">年龄</label>
 							<div class="col-sm-10">
@@ -80,16 +88,16 @@
 									name="age" placeholder="请输入用户年龄">
 							</div>
 						</div>
-						<div class="form-group col-sm-6">
-							<label for="phone" class="col-sm-2 control-label">电话</label>
-							<div class="col-sm-10">
-								<input value="${user.phone}" type="text" class="form-control" id="phone"
-									name="phone" placeholder="请输入用户电话">
-							</div>
-						</div>
 					</div>
 					<shiro:hasAnyRoles name="admin">
 						<div class="row">
+							<div class="form-group col-sm-6">
+								<label for="phone" class="col-sm-2 control-label">电话</label>
+								<div class="col-sm-10">
+									<input value="${user.phone}" type="text" class="form-control" id="phone"
+										name="phone" placeholder="请输入用户电话">
+								</div>
+							</div>
 							<div class="form-group  col-sm-6">
 								<label for="userType" class="col-sm-2 control-label">用户类型</label>
 								<div class="col-sm-10">
@@ -99,15 +107,7 @@
 									</select>
 								</div>
 							</div>
-							<div class="form-group col-sm-6">
-								<label for="status" class="col-sm-2 control-label">用户状态</label>
-								<div class="col-sm-10">
-									<select id="status" name="status" class="form-control">
-										<option value="0">正常</option>
-										<option value="1" ${user.status == 1 ? "selected='selected'" : ""}>禁用</option>
-									</select>
-								</div>
-							</div>
+							
 						</div>
 						<div class="row">
 							<div class="form-group  col-sm-6">
@@ -140,6 +140,15 @@
 							<div class="col-sm-10">
 								<input id="headImage" type="file" name="file"  data-min-file-count="1">
 								<input value="${user.headImage}" type="hidden" name="headImage">
+							</div>
+						</div>
+						<div class="form-group col-sm-6">
+							<label for="status" class="col-sm-2 control-label">用户状态</label>
+							<div class="col-sm-10">
+								<select id="status" name="status" class="form-control">
+									<option value="0">正常</option>
+									<option value="1" ${user.status == 1 ? "selected='selected'" : ""}>禁用</option>
+								</select>
 							</div>
 						</div>
 					</div>

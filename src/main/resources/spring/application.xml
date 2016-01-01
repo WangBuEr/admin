@@ -58,7 +58,7 @@
 	<context:component-scan 
 		base-package="me.king.admin.intf,me.king.admin.service,me.king.admin.util,me.king.util.aspect,me.king.util.spring" />
 <!-- 	spring mail -->
-	<import resource="./spring-mail.xml" />
+<!-- 	<import resource="./spring-mail.xml" /> -->
 	
 	<import resource="./spring-shiro.xml"/>
 </beans>

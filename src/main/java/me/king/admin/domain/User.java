@@ -99,6 +99,14 @@ public class User extends BaseQuery {
      * @mbggenerated Mon Feb 13 15:57:53 CST 2017
      */
     private Date createTime;
+    /**
+     * 用户微信号
+     * 此字段是由MyBatis Generator自动生成，不要修改。
+     *
+     * @mbggenerated Mon Feb 13 15:57:53 CST 2017
+     */
+    private String wx;
+    
     private Organization organization;
     private List<Role> roleList;
     private String fullUrlHeadImage;
@@ -221,5 +229,11 @@ public class User extends BaseQuery {
 	public void setFullUrlHeadImage(String fullUrlHeadImage) {
 		this.fullUrlHeadImage = fullUrlHeadImage;
 	}
-    
+
+	public String getWx() {
+		return wx;
+	}
+	public void setWx(String wx) {
+		this.wx = wx;
+	}
 }

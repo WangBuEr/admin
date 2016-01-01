@@ -45,7 +45,7 @@
 							</div>
 						</div>
 						<div class="form-group col-sm-6">
-							<label for="name" class="col-sm-2 control-label">用户名</label>
+							<label for="name" class="col-sm-2 control-label">姓名</label>
 							<div class="col-sm-10">
 								<input style="display: none;">
 								<input autocomplete="off" value="${user.name}" type="text" class="form-control" id="name"

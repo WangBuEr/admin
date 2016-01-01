@@ -127,12 +127,6 @@
 			<artifactId>guava</artifactId>
 			<version>18.0</version>
 		</dependency>
-		<!-- lombok -->
-		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<version>1.16.8</version>
-		</dependency>
 		<dependency>
 			<groupId>javax.mail</groupId>
 			<artifactId>mail</artifactId>
@@ -160,11 +154,11 @@
 		    <artifactId>joda-time</artifactId>
 		    <version>2.9.7</version>
 		</dependency>
-<!-- 		<dependency> -->
-<!-- 			<groupId>cn.emay</groupId> -->
-<!-- 			<artifactId>emayclient</artifactId> -->
-<!-- 			<version>1.0</version> -->
-<!-- 		</dependency> -->
+		<dependency>
+			<groupId>me.king</groupId>
+		    <artifactId>wx</artifactId>
+		    <version>0.0.1-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<plugins>

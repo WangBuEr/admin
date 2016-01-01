@@ -62,7 +62,7 @@
 	var appPath = "${contextPath}";
 	var path = "${contextPath}";
 	$(function(){
-		$(document).pjax("a[data-pjax]",".content-wrapper",{fragment:".content-wrapper",cache:false});
+		$(document).pjax("a[data-pjax]",".content-wrapper",{fragment:".content-wrapper",cache:false,timeout:5000});
 		$(document).on('pjax:start', function() { NProgress.start();});
 		$(document).on('pjax:end',function() { NProgress.done();});
 	});

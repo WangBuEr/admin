@@ -53,6 +53,7 @@
 		            <li><a data-pjax href="${contextPath}/user/manager"><i class="fa  fa-user"></i>用户管理</a></li>
 		            <li><a data-pjax href="${contextPath}/role/manager"><i class="fa  fa-street-view"></i>角色管理</a></li>
 		            <li><a data-pjax href="${contextPath}/resource/manager"><i class="fa fa-map"></i>资源管理</a></li>
+		            <li><a data-pjax href="${contextPath}/qywx/manager"><i class="fa fa-map"></i>微信管理</a></li>
 		          </ul>
 		        </li>
 		     </shiro:hasAnyRoles>

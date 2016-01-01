@@ -8,7 +8,7 @@
   <context-param>
     <param-name>contextConfigLocation</param-name>
     <param-value>
-    	classpath:spring/spring-service.xml
+    	classpath:spring/application.xml
     </param-value>
   </context-param>
   <context-param>
@@ -28,6 +28,11 @@
   <listener>
     <listener-class>ch.qos.logback.ext.spring.web.LogbackConfigListener</listener-class>
   </listener>
+  
+  <listener>
+    <listener-class>me.king.admin.web.listener.AccessTokenListener</listener-class>
+  </listener>
+  
   <filter>
     <filter-name>characterEncodingFilter</filter-name>
     <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>

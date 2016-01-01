@@ -3,8 +3,6 @@ package me.king.admin.util;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-import lombok.Data;
-
 /**
  * 
  *@Title:  
@@ -14,7 +12,6 @@ import lombok.Data;
  *@Version:1.1.0
  */
 @Component
-@Data
 public class ConfigProperties {
 	@Value("${des.key}")
 	private String desKey;
@@ -32,6 +29,10 @@ public class ConfigProperties {
 	private String qiNiuBucketName;
 	@Value("${qiniu.link}")
 	private String qiNiuLink;
+	@Value("${wx.qy.corpid}")
+	private String wxQyCorpid;
+	@Value("${wx.qy.corpsecret}")
+	private String wxQyCorpsecret;
 	public String getDesKey() {
 		return desKey;
 	}
@@ -79,6 +80,18 @@ public class ConfigProperties {
 	}
 	public void setQiNiuLink(String qiNiuLink) {
 		this.qiNiuLink = qiNiuLink;
+	}
+	public String getWxQyCorpid() {
+		return wxQyCorpid;
+	}
+	public void setWxQyCorpid(String wxQyCorpid) {
+		this.wxQyCorpid = wxQyCorpid;
+	}
+	public String getWxQyCorpsecret() {
+		return wxQyCorpsecret;
+	}
+	public void setWxQyCorpsecret(String wxQyCorpsecret) {
+		this.wxQyCorpsecret = wxQyCorpsecret;
 	}
 	
 }

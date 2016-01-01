@@ -1,9 +1,5 @@
 package me.king.admin.web.vo;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-@AllArgsConstructor
-@Data
 public class BusinessExecutionResult {
 	private static final String SUCCESS = "10000";
 	private static final String ERROR_PARAM = "20000";
