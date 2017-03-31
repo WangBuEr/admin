@@ -1,4 +1,4 @@
-package me.king.admin.web.controller;
+package me.king.admin.web.controller.manager;
 
 import javax.annotation.Resource;
 
@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import me.king.admin.domain.Organization;
-import me.king.admin.service.OrganizationService;
+import me.king.admin.service.manager.OrganizationService;
 import me.king.admin.web.vo.BusinessExecutionResult;
 
 @RequestMapping("organization")

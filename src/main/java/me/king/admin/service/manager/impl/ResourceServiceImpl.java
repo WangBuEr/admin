@@ -1,4 +1,4 @@
-package me.king.admin.service.impl;
+package me.king.admin.service.manager.impl;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -12,7 +12,7 @@ import me.king.admin.domain.Resource;
 import me.king.admin.persistence.ResourceMapper;
 import me.king.admin.persistence.RoleResourceMapper;
 import me.king.admin.persistence.UserMapper;
-import me.king.admin.service.ResourceService;
+import me.king.admin.service.manager.ResourceService;
 @Service
 @Transactional
 public class ResourceServiceImpl implements ResourceService{

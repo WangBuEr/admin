@@ -298,5 +298,12 @@
     from user
     where login_name = #{loginName,jdbcType=VARCHAR}
   </select>
+  
+  <select id="selectAll" resultMap="BaseResultMap">
+  	 select 
+    <include refid="Base_Column_List" />
+    from user
+    where status = 0
+  </select>
 <!--   biz end -->
 </mapper>

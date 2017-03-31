@@ -1,4 +1,4 @@
-package me.king.admin.service.impl;
+package me.king.admin.service.manager.impl;
 
 import java.io.UnsupportedEncodingException;
 import java.util.Date;
@@ -17,7 +17,7 @@ import me.king.admin.domain.UserRole;
 import me.king.admin.persistence.RoleMapper;
 import me.king.admin.persistence.UserMapper;
 import me.king.admin.persistence.UserRoleMapper;
-import me.king.admin.service.UserService;
+import me.king.admin.service.manager.UserService;
 import me.king.admin.util.ConfigProperties;
 @Service
 @Transactional

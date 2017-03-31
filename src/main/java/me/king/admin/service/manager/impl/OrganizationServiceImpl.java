@@ -1,4 +1,4 @@
-package me.king.admin.service.impl;
+package me.king.admin.service.manager.impl;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -13,7 +13,7 @@ import org.springframework.transaction.annotation.Transactional;
 import me.king.admin.domain.Organization;
 import me.king.admin.persistence.OrganizationMapper;
 import me.king.admin.persistence.UserMapper;
-import me.king.admin.service.OrganizationService;
+import me.king.admin.service.manager.OrganizationService;
 @Service
 @Transactional
 public class OrganizationServiceImpl implements OrganizationService {

@@ -1,4 +1,4 @@
-package me.king.admin.service.impl;
+package me.king.admin.service.manager.impl;
 
 import java.util.List;
 
@@ -11,7 +11,7 @@ import me.king.admin.domain.Role;
 import me.king.admin.domain.RoleResource;
 import me.king.admin.persistence.RoleMapper;
 import me.king.admin.persistence.RoleResourceMapper;
-import me.king.admin.service.RoleService;
+import me.king.admin.service.manager.RoleService;
 @Service
 @Transactional
 public class RoleServiceImpl implements RoleService {

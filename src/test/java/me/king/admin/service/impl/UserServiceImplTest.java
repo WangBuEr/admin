@@ -10,7 +10,7 @@ import org.junit.Test;
 
 import me.king.admin.ServiceBasicTest;
 import me.king.admin.domain.User;
-import me.king.admin.service.UserService;
+import me.king.admin.service.manager.UserService;
 
 public class UserServiceImplTest extends ServiceBasicTest {
 	@Resource

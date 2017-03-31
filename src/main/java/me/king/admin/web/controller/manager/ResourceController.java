@@ -1,4 +1,4 @@
-package me.king.admin.web.controller;
+package me.king.admin.web.controller.manager;
 
 import javax.annotation.Resource;
 
@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import me.king.admin.service.ResourceService;
+import me.king.admin.service.manager.ResourceService;
 import me.king.admin.web.vo.BusinessExecutionResult;
 @Controller
 @RequestMapping("resource")

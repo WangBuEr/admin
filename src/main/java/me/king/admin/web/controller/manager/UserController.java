@@ -1,4 +1,4 @@
-package me.king.admin.web.controller;
+package me.king.admin.web.controller.manager;
 
 import java.util.HashMap;
 import java.util.List;
@@ -20,7 +20,7 @@ import com.alibaba.fastjson.JSONArray;
 
 import me.king.admin.domain.Role;
 import me.king.admin.domain.User;
-import me.king.admin.service.UserService;
+import me.king.admin.service.manager.UserService;
 import me.king.admin.util.ConfigProperties;
 import me.king.admin.web.vo.BusinessExecutionResult;
 import me.king.admin.web.vo.DataTablesRsp;

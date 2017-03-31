@@ -1,4 +1,4 @@
-package me.king.admin.service;
+package me.king.admin.service.manager;
 
 import java.util.List;
 

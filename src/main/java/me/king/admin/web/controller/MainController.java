@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
-import me.king.admin.service.UserService;
+import me.king.admin.service.manager.UserService;
 import me.king.admin.web.vo.BusinessExecutionResult;
 
 @Controller

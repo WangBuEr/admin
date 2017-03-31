@@ -54,9 +54,34 @@ public interface UserMapper {
     int updateByPrimaryKey(User record);
     
 //    biz begin
+    /**
+     * 根据组织id删除用户
+     * @param orgId
+     * @return
+     */
     int deleteByOrgId(Long orgId);
+    /**
+     * 动态查询
+     * @param user
+     * @return
+     */
     List<User> selectSelective(User user);
+    /**
+     * 动态查询总数
+     * @param user
+     * @return
+     */
     int selectSelectiveCount(User user);
+    /**
+     * 根据登录名查询
+     * @param loginName
+     * @return
+     */
     User selectByLoginName(String loginName);
+    /**
+     * 查询所有有效用户
+     * @return
+     */
+    List<User> selectAll();
 //    biz end
 }

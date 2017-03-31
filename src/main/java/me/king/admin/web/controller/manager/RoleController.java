@@ -1,4 +1,4 @@
-package me.king.admin.web.controller;
+package me.king.admin.web.controller.manager;
 
 import java.util.List;
 
@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import me.king.admin.domain.Role;
-import me.king.admin.service.RoleService;
+import me.king.admin.service.manager.RoleService;
 import me.king.admin.web.vo.BusinessExecutionResult;
 import me.king.admin.web.vo.DataTablesRsp;
 
