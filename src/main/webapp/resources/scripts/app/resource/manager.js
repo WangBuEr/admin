@@ -57,18 +57,6 @@ function initResInfoFormValidator(){
                     }
                 }
             },
-            url: {
-            	validators: {
-            		notEmpty: {
-            			message: '资源路径不能为空'
-            		},
-            		stringLength: {
-            			min: 1,
-            			max: 64,
-            			message: '资源路径为1~100位'
-            		}
-            	}
-            },
             resourceType: {
             	validators: {
             		notEmpty: {

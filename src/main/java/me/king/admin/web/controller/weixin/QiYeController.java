@@ -6,6 +6,8 @@ import javax.servlet.ServletContext;
 import org.apache.shiro.authz.annotation.RequiresRoles;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.context.ContextLoader;
 
 import me.king.admin.service.weixin.QiYeService;
@@ -29,11 +31,15 @@ public class QiYeController {
 	public String manager(){
 		return "/weixin/qy/manager";
 	}
-	@RequestMapping("async")
-	public BusinessExecutionResult async(){
+	/**
+	 * 同步通讯录
+	 * @return
+	 */
+	@RequestMapping(value = "sync",method = RequestMethod.POST)
+	@ResponseBody
+	public BusinessExecutionResult sync(){
 		ServletContext context = ContextLoader.getCurrentWebApplicationContext().getServletContext();
 		AccessToken token = (AccessToken) context.getAttribute("wxqyToken");
-		qyService.addressBookAsync(token);
-		return BusinessExecutionResult.success();
+		return BusinessExecutionResult.success(qyService.addressBookAsync(token));
 	}
 }

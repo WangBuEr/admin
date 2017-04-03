@@ -38,9 +38,9 @@
 						<div class="form-group  col-sm-6">
 							<label for="loginName" class="col-sm-2 control-label">登录名</label>
 							<div class="col-sm-10">
-								<input value="${user.loginName}" type="text" class="form-control" id="loginName"
+								<input value="${requestScope.user.loginName}" type="text" class="form-control" id="loginName"
 									name="loginName" placeholder="请输入登录名">
-									<input value="${user.id}" type="hidden" class="form-control" id="id"
+									<input value="${requestScope.user.id}" type="hidden" class="form-control" id="id"
 									name="id">
 							</div>
 						</div>
@@ -57,7 +57,7 @@
 						<div class="form-group col-sm-6">
 							<label for="wx" class="col-sm-2 control-label">微信号</label>
 							<div class="col-sm-10">
-								<input autocomplete="off" value="${user.wx}" type="text" class="form-control" id="name"
+								<input autocomplete="off" value="${requestScope.user.wx}" type="text" class="form-control" id="name"
 									name="wx" placeholder="请输入微信号">
 							</div>
 						</div>
@@ -65,7 +65,7 @@
 							<label for="name" class="col-sm-2 control-label">用户姓名</label>
 							<div class="col-sm-10">
 								<input style="display: none;">
-								<input autocomplete="off" value="${user.name}" type="text" class="form-control" id="name"
+								<input autocomplete="off" value="${requestScope.user.name}" type="text" class="form-control" id="name"
 									name="name" placeholder="请输入用户姓名">
 							</div>
 						</div>
@@ -77,14 +77,14 @@
 							<div class="col-sm-10">
 								<select id="sex" name="sex" class="form-control">
 									<option value="1">男</option>
-									<option value="0" ${user.sex == 0 ? "selected='selected'" : ""}>女</option>
+									<option value="0" ${requestScope.user.sex == 0 ? "selected='selected'" : ""}>女</option>
 								</select>
 							</div>
 						</div>
 						<div class="form-group  col-sm-6">
 							<label for="age" class="col-sm-2 control-label">年龄</label>
 							<div class="col-sm-10">
-								<input value="${user.age}" type="text" class="form-control" id="age"
+								<input value="${requestScope.user.age}" type="text" class="form-control" id="age"
 									name="age" placeholder="请输入用户年龄">
 							</div>
 						</div>
@@ -94,7 +94,7 @@
 							<div class="form-group col-sm-6">
 								<label for="phone" class="col-sm-2 control-label">电话</label>
 								<div class="col-sm-10">
-									<input value="${user.phone}" type="text" class="form-control" id="phone"
+									<input value="${requestScope.user.phone}" type="text" class="form-control" id="phone"
 										name="phone" placeholder="请输入用户电话">
 								</div>
 							</div>
@@ -103,7 +103,7 @@
 								<div class="col-sm-10">
 									<select id="userType" name="userType" class="form-control">
 										<option value="1">用户</option>
-										<option value="0" ${user.userType == 0 ? "selected='selected'" : ""}>管理员</option>
+										<option value="0" ${requestScope.user.userType == 0 ? "selected='selected'" : ""}>管理员</option>
 									</select>
 								</div>
 							</div>
@@ -114,8 +114,8 @@
 								<label for="userInfoOrgName" class="col-sm-2 control-label">部门</label>
 								<div class="col-sm-10">
 									 <div class="input-group">
-										  <input value="${user.organization.name}" id="userInfoOrgName" readonly="readonly" type="text" class="form-control" placeholder="请选择部门" aria-describedby="searchSelectOrgBtn">
-										  <input value="${user.organizationId}" id="organizationId" name="organizationId" readonly="readonly" type="hidden" class="form-control">
+										  <input value="${requestScope.user.organization.name}" id="userInfoOrgName" readonly="readonly" type="text" class="form-control" placeholder="请选择部门" aria-describedby="searchSelectOrgBtn">
+										  <input value="${requestScope.user.organizationId}" id="organizationId" name="organizationId" readonly="readonly" type="hidden" class="form-control">
 										  <div class="input-group-btn">
 										  	<button id="userInfoCleanOrgBtn" type="button" class="btn btn-default" aria-label="Help">
 										  		<span class="glyphicon glyphicon-remove"></span>
@@ -139,7 +139,7 @@
 							<label for="userType" class="col-sm-2 control-label">头像</label>
 							<div class="col-sm-10">
 								<input id="headImage" type="file" name="file"  data-min-file-count="1">
-								<input value="${user.headImage}" type="hidden" name="headImage">
+								<input value="${requestScope.user.headImage}" type="hidden" name="headImage">
 							</div>
 						</div>
 						<div class="form-group col-sm-6">
@@ -147,7 +147,7 @@
 							<div class="col-sm-10">
 								<select id="status" name="status" class="form-control">
 									<option value="0">正常</option>
-									<option value="1" ${user.status == 1 ? "selected='selected'" : ""}>禁用</option>
+									<option value="1" ${requestScope.user.status == 1 ? "selected='selected'" : ""}>禁用</option>
 								</select>
 							</div>
 						</div>

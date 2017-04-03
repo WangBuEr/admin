@@ -91,6 +91,7 @@
 							<label for="openMode" class="col-sm-2 control-label">打开方式</label>
 							<div class="col-sm-10">
 								<select id="openMode" name="openMode" class="form-control">
+									<option value="menu">menu</option>
 									<option value="pjax">pjax</option>
 									<option value="ajax">ajax</option>
 									<option value="iframe">iframe</option>

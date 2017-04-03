@@ -2,6 +2,7 @@ package me.king.admin.service.weixin.impl;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import javax.annotation.Resource;
 
@@ -30,7 +31,7 @@ public class QiYeServiceImpl implements QiYeService {
 	@Resource
 	private UserMapper userDao;
 	@Override
-	public Boolean addressBookAsync(AccessToken token) {
+	public Map<String, Integer> addressBookAsync(AccessToken token) {
 		List<Organization> orgList = orgDao.selectAll();
 		List<Department> asyncDeptList = new ArrayList<>();
 		for(Organization org : orgList){
@@ -47,8 +48,7 @@ public class QiYeServiceImpl implements QiYeService {
 			me.king.wx.qy.user.vo.User asyncUser = new me.king.wx.qy.user.vo.User(user.getLoginName(), user.getName(), depts, user.getPhone(), sex, user.getWx());
 			asyncUserList.add(asyncUser);
 		}
-		AddressBookManager.sync(token, asyncDeptList, asyncUserList);
-		return true;
+		return AddressBookManager.sync(token, asyncDeptList, asyncUserList);
 	}
 	
 }

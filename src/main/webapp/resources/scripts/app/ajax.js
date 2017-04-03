@@ -39,6 +39,8 @@ function jsonAjax(url, param, successCallBack, errorCallBack,method) {
 				notie.alert(3, '服务器发生错误，请与管理员联系！',3);
 			}else if(req.status == 405){
 				notie.alert(3, '非法请求！',3);
+			}else if(req.status == 404){
+				notie.alert(3, '资源未定义！',3);
 			}
 		}
 	});

@@ -1,5 +1,7 @@
 package me.king.admin.service.weixin;
 
+import java.util.Map;
+
 import me.king.wx.token.AccessToken;
 
 /**  
@@ -13,8 +15,8 @@ public interface QiYeService {
 	/**
 	 * 通讯录同步
 	 * @param token 令牌
-	 * @return 是否同步成功
+	 * @return 同步情况
 	 */
-	Boolean addressBookAsync(AccessToken token);
+	Map<String, Integer> addressBookAsync(AccessToken token);
 }
 

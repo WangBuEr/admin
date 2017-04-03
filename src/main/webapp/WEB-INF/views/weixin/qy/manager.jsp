@@ -33,11 +33,41 @@
 	<section class="content">
 		<div class="panel panel-default">
 			<div class="panel-body">
-				<a href="javascript:void(0);" style="display: inline-block;width: 200px;height: 230px;background:url('${contextPath}/resources/img/common/async.jpg');">asdfsdf</a>
+				<div style="text-align: center;cursor: pointer;" id="syncAddrBook">
+					<img id="syncAddrBookImg" href="javascript:void(0);" src="${contextPath}/resources/img/common/sync.gif"></img>
+					<a href="javascript:void(0);" style="display: block;">同步通讯录</a>
+				</div>
 			</div>
 		</div>
 	</section>
 	<!-- /.content -->
+	<script type="text/javascript" src="${contextPath}/resources/scripts/lib/jQueryRotate.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$("#syncAddrBook").bind("click",function(){
+				syncAddrBook();
+			});
+		});
+		function syncAddrBook(){
+			$("#syncAddrBook").unbind("click");
+			$('#syncAddrBookImg').rotate({angle:0,animateTo:360*1000,duration:1000*18*1000});
+			$("#syncAddrBook").find("a").text("同步中......");
+			jsonAjax(appPath + "/weixin/qiye/sync",null,function(data){
+				notie.alert(1,"新增部门：" + data.syncSuccessAddDept+"个，"
+						+"更新部门：" + data.syncSuccessUpdateDept+"个，"
+						+"新增用户：" + data.syncSuccessAddUser+"个，"
+						+"更新用户：" + data.syncSuccessUpdateUser+"个，"
+						+"同步失败部门：" + data.syncFailDept + "个，"
+						+"同步失败用户：" + data.syncFailUser + "个，"
+						+"忽略同步用户：" + data.skipSyncUser + "个",3);
+				$("#syncAddrBook").find("a").text("同步通讯录");
+				$("#syncAddrBookImg").stopRotate();
+				$("#syncAddrBook").bind("click",function(){
+					syncAddrBook();
+				});
+			});
+		}
+	</script>
 </div>
   <!-- /.content-wrapper -->
 
